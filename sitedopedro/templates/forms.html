@@ -1,0 +1,27 @@
+<h1>{{ action }} Receita</h1>
+
+<form method='post'>
+  {% csrf_token %}
+  <div>
+    <label>Nome:></label>
+    <input name='nome' value='{{ comida.nome }}'>
+  </div>
+
+  <div>
+    <label>Origem:></label>
+    <input name='origem' value='{{ comida.origem }}'>
+  </div>
+
+  <div>
+    <label>Nota:></label>
+    <input type='number' name='nota' value='{{ comida.origem }}'>
+  </div>
+
+  <div>
+    <label>Tipo:></label>
+    <input name='tipo' value='{{ comida.origem }}'>
+  </div>
+
+
+  <input type='submit' value='Registrar'>
+</form>

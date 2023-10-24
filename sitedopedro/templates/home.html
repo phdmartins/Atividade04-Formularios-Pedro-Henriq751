@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="{% static 'sitedopedro/css/style.css' %}">
+  <title>Pedro Henrique Dodsworth Martins Cavalcanti D'Albuquerque</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap" rel="stylesheet">
+</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+<body>
+  <div class="posicao_titulo">
+  <h1>As melhores receitas práticas e simples</h1>
+  <h3><i>Criado por: Pedro Henrique Martins</i></h3>
+  </div>
+  <div class="posicao_desc">
+  <p style="text-align:center">Sabe quando você chega em casa cansado e com fome, e não está com paciência para ficar cozinhando algo complexo que demande muito tempo? Ou quando você está atrasado para algum lugar e tem que comer rápido e não pode perder tempo preparando algo pra comer? Muitos compartilham desses sentimentos, e por isso venho aqui com as <b>melhores receitas <mark>simples</mark>, <mark>práticas</mark> e <mark>rápidas</mark></b> para matar aquela fome sem demandar tempo e talento.</p>
+    <br> 
+  </div>
+  <div class="posicao_img">
+  <img src="https://i1.wp.com/www.dci.com.br/wp-content/uploads/2020/09/crepioca-gettyimages-1-1130x580.jpg" width=500
+  <img src="https://yt3.googleusercontent.com/ytc/AOPolaTh-OyNqP0z8rhVRCbhwLzQ8z470xJytJzUCB1l=s900-c-k-c0x00ffffff-no-rj" width=300 > 
+   <img src="https://3.bp.blogspot.com/-AohjYxHwqhw/VfFZo4vGLcI/AAAAAAAATUw/NFrEtnV9ZLc/s640/29-08-2015Bruschettas%2Btomate%2By%2Balbahaca1.JPG" width=400>
+   </div>
+  <div>
+    <h2>Crepeoca</h2>
+    <ul>
+      <li><b>Ingredientes</b></li>
+      <p>1 ovo; 2 colheres (sopa) de farinha de tapioca; 1 colher (sopa) de requeijão.</p>
+      <li><b>Modo de preparo</b></li>
+      <p>Em uma vasilha, bata o ovo com uma tapioca até formar um líquido homogêneo. Acrescente o requeijão e misture bem. Tempere com sal e outros temperos a gosto. Aqueça bem uma frigideira antiaderente. Coloque a mistura da vasilha na frigideira. Espere a massa soltar nas laterais. Quando estiver solta, vire e doure o outro lado. Então recheie a gosto.</p>
+    </ol>
+  </div>
+  <div>
+    <h2>Bruschetta</h2>
+    <ul>
+      <li><b>Ingredientes</b></li>
+      <p>Pão torrado; Alho; Azeite; Vinagre balsâmico; Tomates maduros; Sal, pimenta e orégano</p>
+      <li><b>Modo de preparo</b></li>
+      <p>Parta o pão em fatias muito finas, coloque na torradeira. Com o pão ainda morno, esfregue o alho até que este se misture bem no pão. Parta o tomate aos cubos, espalhe por cima do pão e tempere com orégano, sal, pimenta, azeite e vinagre balsâmico.</p>
+      <p>Para mais sabores de bruschetta, dê uma olhada no  <a href="https://www.guiadasemana.com.br/receitas/galeria/receitas-de-bruschettas" target="_blank" rel="noopener noreferrer">site de receitas</a> disponível.</p>
+    </ol>
+  </div>
+  <div>
+    <h2>Bolo de caneca</h2>
+    <ul>
+      <li><b>Ingredientes</b></li>
+      <p>2 ovos; 8 colheres de sopa de leite; 2 colheres de sopa de óleo de canola; 6 colheres de sopa de açúcar; 8 colheres de sopa de farinha de trigo; 4 colheres de sopa de cacau em pó; Meia colher de sopa de fermento químico</p>
+      <li><b>Modo de preparo</b></li>
+      <p>Em uma tigela funda, coloque 2 ovos, 8 colheres de sopa de leite, 2 colheres de sopa de óleo de canola e misture. Em seguida, adicione 6 colheres de sopa de açúcar, 8 colheres de sopa de farinha de trigo, 4 colheres de sopa de cacau em pó e misture. Por último, acrescente meia colher de sopa de fermento químico. Misture novamente. Unte duas canecas com manteiga ou óleo. Depois, enfarinhe para que a massa não grude. Divida a massa entre as canecas. Leve ao micro-ondas por 3 minutos em potência máxima. Retire e sirva em seguida.</p>
+    </ul>
+  </div>
+  <div class="posicao_titulo">
+    <a href='/comidas'>Adicionar Nova Receita</a>
+  <h2>Receitas:</h2>
+  <!-- <ol>
+    <li>Crepeoca</li>
+    <li>Bruschetta</li>
+    <li>Bolo de caneca</li>
+  </ol> -->
+  <ol>
+    {% for comida in comidas %}
+      <li>
+        {{ comida.nome }}
+        <a href='/comidas/update/{{ comida.id }}'>Atualizar</a>
+        <a href='/comidas/delete/{{ comida.id }}'>Remover</a>
+      </li>
+    {% endfor %}
+  </ol>
+  <h2>Melhores Sites de Receitas:</h2>
+  <ol>
+    <li>TudoGostoso</li>
+    <li>Guia da Cozinha</li>
+    <li>Receitas da Hora</li>
+  </ol>
+  <ol>
+    {% for site in sites %}
+      <li>{{ site.nome }}</li>
+    {% endfor %}
+  </ol>
+  </div>
+  <div class="posicao_titulo">
+  <h2>Ranking:</h2>
+  <h4>De acordo com os critérios abaixo, segue a ordem das receitas:</h4>
+  <table>
+    <thead>
+        <tr>
+            <th>Mais prático</th>
+            <th>Mais gostoso</th>
+            <th>Mais rápido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Crepeoca</td>
+            <td>Bruschetta</td>
+            <td>Bolo de caneca</td>
+        </tr>
+        <tr>
+            <td>Bruschetta</td>
+            <td>Bolo de caneca</td>
+            <td>Crepeoca</td>
+        </tr>
+        <tr>
+            <td>Crepeoca</td>
+            <td>Bolo de caneca</td>
+            <td>Bruschetta</td>
+        </tr>
+    </tbody>
+</table>        
+    </div>
+<br>
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>  
